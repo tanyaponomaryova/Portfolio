@@ -1,0 +1,146 @@
+:root {
+  --grey: #7e7e7e;
+  --footer-bg: #7e7e7e;
+  --footer-text-color: #ffffff;
+  --link-hover: rgb(255, 109, 165);
+}
+
+body {
+  font-family:
+    'Manrope',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--footer-text-color);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+#hero-section {
+  height: 100vh;
+  font-size: 70px;
+  /* background-color: antiquewhite; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+#hero-title {
+  font-weight: 600;
+  color: var(--grey);
+  padding-bottom: 40px;
+  padding-left: 20px;
+}
+
+.icon {
+  width: 0;
+  height: 60px;
+  margin: 0;
+  /* padding:; */
+  display: inline-block;
+  overflow: hidden;
+}
+
+.trail-img {
+  position: absolute;
+  width: auto;
+  height: 60px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: fade 1s linear;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+}
+
+/*  */
+/*  */
+/* FOOTER */
+footer {
+  width: 100vw;
+  background-color: var(--footer-bg);
+  color: var(--footer-text-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px 20px 0 0;
+
+  padding: 30px 30px;
+}
+
+footer h6 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+footer p {
+}
+
+#social-links-container {
+  display: flex;
+  gap: 20px;
+}
+
+.socials-link {
+  position: relative;
+}
+
+.socials-link svg:hover {
+  fill: currentColor;
+}
+
+.socials-link::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+  /* left: 50%; */
+  /* bottom: 120%; */
+  transform: translateX(10px) translateY(-10px);
+  background: rgb(72, 72, 72);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  white-space: nowrap;
+
+  z-index: 3;
+}
+
+.socials-link:hover::after {
+  opacity: 1;
+}
