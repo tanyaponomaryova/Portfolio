@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (block.type === 'single') {
       row = document.createElement('div');
       row.className = 'single-image';
-      row.innerHTML = `<img src="../img/projects/${slug}/${block.content}">`;
+      row.innerHTML = `<img src="img/projects/${slug}/${block.content}">`;
     } else {
       row = document.createElement('div');
       row.className = 'two-images';
       row.innerHTML = block.content
-        .map((img) => `<img src="../img/projects/${slug}/${img}">`)
+        .map((img) => `<img src="img/projects/${slug}/${img}">`)
         .join('');
     }
     contentSection.appendChild(row);

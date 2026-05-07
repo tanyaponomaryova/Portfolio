@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   projects.forEach((project) => {
     // создаём элемент Карточка
     const card = document.createElement('a');
-    card.href = `/project.html?project=${project.slug}`;
+    card.href = `project.html?project=${project.slug}`;
     card.className = 'project-card';
 
     // элемент обложка
     const cover = document.createElement('div');
     cover.className = 'project-cover';
-    cover.style.backgroundImage = `url("../img/projects/${project.slug}/${project.coverUrl}")`;
+    cover.style.backgroundImage = `url("img/projects/${project.slug}/${project.coverUrl}")`;
 
     // элемент название
     const title = document.createElement('h3');
