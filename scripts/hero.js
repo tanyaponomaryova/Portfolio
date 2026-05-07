@@ -96,7 +96,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // Запуск каждые 3 секунды
   setInterval(showRandomIcon, 3000);
 
-  console.log(gsap);
-
   // #endregion
 });

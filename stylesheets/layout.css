@@ -80,7 +80,9 @@ nav {
 h2 {
   font-size: 3rem;
   font-weight: 600;
-  /* margin: 0 0 3rem 0; */
+
+  /* чтобы ссылка срабатывала только когда наводишь на текст, а не на всю строку */
+  display: inline;
 }
 
 p {
@@ -94,6 +96,9 @@ a {
   text-decoration: none;
   color: var(--text);
   transition: 0.3s;
+
+  /* чтобы ссылка срабатывала только когда наводишь на текст, а не на всю строку */
+  width: fit-content;
 }
 
 a:hover {
@@ -237,7 +242,7 @@ a:hover {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  width: 25vw;
+  width: 25rem;
 }
 
 #projects-gallery-animation-wrap .project-cover {
@@ -432,4 +437,20 @@ footer a {
   display: block;
 }
 
+/* #endregion */
+
+/* #region АНИМАЦИЯ ПОЯВЛЕНИЯ */
+.fade-in {
+  opacity: 0;
+  /* transform: translateY(40px); */
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* #endregion */
