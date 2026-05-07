@@ -72,6 +72,7 @@ p {
 a {
   text-decoration: none;
   color: var(--text);
+  transition: 0.3s;
 }
 
 a:hover {
@@ -184,6 +185,8 @@ a:hover {
   cursor: pointer;
 
   z-index: 999;
+
+  transition: 0.4s;
 }
 
 .arrow.left {
