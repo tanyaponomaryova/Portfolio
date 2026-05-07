@@ -4,6 +4,22 @@
   --footer-text-color: #ffffff;
   --link-hover: rgb(255, 109, 165);
   --normal-text-size: 1.1;
+
+  /* tags colors*/
+  --tag-1: rgb(255, 109, 165);
+  --tag-2: rgb(255, 109, 240);
+  --tag-3: rgb(136, 109, 255);
+  --tag-4: rgb(44, 171, 255);
+  --tag-5: rgb(67, 255, 195);
+  --tag-6: rgb(155, 255, 109);
+  --tag-7: rgb(255, 250, 109);
+  --tag-8: rgb(255, 125, 82);
+  --tag-9: rgb(142, 142, 142);
+}
+
+html,
+body {
+  overscroll-behavior: none;
 }
 
 /* #region База */
@@ -177,28 +193,39 @@ a:hover {
 /* стрелки */
 .arrow {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 37%;
+  /* transform: translateY(-50%); */
 
-  z-index: 10;
-  background: black;
-  color: white;
+  z-index: 999;
+  background: rgb(255, 255, 255);
   border: none;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   z-index: 999;
 
   transition: 0.4s;
 }
 
+.arrow svg {
+  stroke: var(--text);
+  width: 0.5rem;
+  height: auto;
+}
+
 .arrow.left {
-  left: 10px;
+  left: 2vw;
+  padding-left: 0.1rem;
 }
 .arrow.right {
-  right: 10px;
+  right: 2vw;
+  padding-right: 0.1rem;
 }
 
 .arrow.hidden {
@@ -236,6 +263,21 @@ a:hover {
   background-size: cover;
   transition: transform 0.4s ease;
   will-change: transform;
+}
+
+/* ТЕГИ */
+.tags-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tags-container span {
+  background-color: rgb(255, 128, 196);
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.7rem 0.4rem 0.7rem;
+  border-radius: 1rem;
 }
 
 /* #endregion */

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // меняем название вкладки
   document.title = `${project.title}`;
 
-  const descSection = document.createElement('section');
+  const descSection = document.createElement('div');
   descSection.innerHTML = `<h2>${project.title}</h2>
       <div class="paragraph-tags">
         <p class="paragraph">
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </p>
       </div>`;
 
-  const contentSection = document.createElement('section');
+  const contentSection = document.createElement('div');
   let row;
   project.content.forEach((block) => {
     if (block.type === 'text') {
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('next-project').innerHTML = `
   <a
-    href="/project.html?project=${nextProject.slug}"
+    href="project.html?project=${nextProject.slug}"
     class="next-project-link"
   >
     Следующий проект —

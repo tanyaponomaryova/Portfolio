@@ -5,7 +5,7 @@ const projects = [
     title: 'Гаражжж | Айдентика ',
     shortDescription: 'Айдентика и визуальная система для бара.',
     fullDescription: 'Полное описание проекта. Здесь может быть длинный текст.',
-    tags: ['Brand Identity', 'Packaging', 'Web Design'],
+    tags: ['Айдентика', 'Иллюстрация', 'Упаковка'],
     content: [
       {
         type: 'double',
@@ -73,7 +73,7 @@ const projects = [
     title: 'Звериум | Мобильное приложение ',
     shortDescription: 'Айдентика и визуальная система для бара.',
     fullDescription: 'Полное описание проекта. Здесь может быть длинный текст.',
-    tags: ['Brand Identity', 'Packaging', 'Web Design'],
+    tags: ['Айдентика', 'Интерфейс', 'Упаковка'],
     content: [
       // путь "../img/projects/slug/" + [
       {
@@ -148,7 +148,7 @@ const projects = [
     title: 'Гаражжж | 3D Пространство',
     shortDescription: 'Айдентика и визуальная система для бара.',
     fullDescription: 'Полное описание проекта. Здесь может быть длинный текст.',
-    tags: ['Brand Identity', 'Packaging', 'Web Design'],
+    tags: ['3D', 'Книга'],
     content: [
       // путь "../img/projects/slug/" + [
       {
@@ -194,7 +194,7 @@ const projects = [
     title: 'Гаражжж | Веб-плакат',
     shortDescription: 'Айдентика и визуальная система для бара.',
     fullDescription: 'Полное описание проекта. Здесь может быть длинный текст.',
-    tags: ['Brand Identity', 'Packaging', 'Web Design'],
+    tags: ['Веб-дизайн', 'Анимация', 'Иллюстрация'],
     content: [
       // путь "../img/projects/slug/" + [
       {
