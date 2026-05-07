@@ -10,4 +10,8 @@
   #big-gallery-wrap #projects-gallery {
     grid-template-columns: 1fr;
   }
+
+  #big-gallery-wrap .project-card {
+    width: 92vw;
+  }
 }
