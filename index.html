@@ -10,6 +10,16 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   </head>
   <body>
+    <nav>
+      <div id="nav-main-container">
+        <a href="index.html"><div id="main-logo"></div></a>
+        <div id="nav-page-links-container">
+          <a href="projects.html">Проекты</a>
+          <a href="about-me.html">Обо мне</a>
+        </div>
+      </div>
+    </nav>
+
     <section id="hero-section">
       <h1 id="hero-title">
         <span></span>
@@ -26,19 +36,99 @@
     </section>
 
     <section id="section-projects-gallery">
-      <h2>Мои проекты</h2>
-      <div id="projects-gallery">
-        <div class="project-card">
-          <img src="project-cover" alt="" />
-        </div>
-      </div>
+      <a href="projects.html"><h2>Мои проекты</h2></a>
     </section>
+
+    <div id="projects-gallery-wrap">
+      <button class="arrow left">‹</button>
+
+      <div id="projects-gallery">
+        <!-- ГАРАЖЖЖ АЙДЕНТИКА -->
+        <a
+          href="projects/garazhzhzh-brand-identity.html"
+          class="project-card"
+          id="garazhzhzh-brand-identity"
+        >
+          <div class="project-cover"></div>
+          <h3 class="project-title">Айдентика Гаражжж</h3>
+          <p class="project-desc">
+            Описние оизышграхфшохаобшщ ihpi ‘;dnfpiujbvpi ierghspiubvfi
+            egroihrouvhidu pohsf jbjdfoiub sdihfpigu psihuf poiehfop sdjbvjh
+            шрам фшзар зырмотчсмлт paihfpidhfvkbj/
+          </p>
+        </a>
+        <!-- ЗВЕРИУМ -->
+        <a href="projects/zverium.html" class="project-card" id="zverium">
+          <div class="project-cover"></div>
+          <h3 class="project-title">Звериум | Мобильное приложение</h3>
+          <p class="project-desc">
+            Описние оизышграхфшохаобшщ ihpi ‘;dnfpiujbvpi ierghspiubvfi
+            egroihrouvhidu pohsf jbjdfoiub sdihfpigu psihuf poiehfop sdjbvjh
+            шрам фшзар зырмотчсмлт paihfpidhfvkbj/
+          </p>
+        </a>
+        <!-- ПРОСТРАНСТВО -->
+        <a
+          href="projects/garazhzhzh-3d-environment.html"
+          class="project-card"
+          id="garazhzhzh-3d-environment"
+        >
+          <div class="project-cover"></div>
+          <h3 class="project-title">Пространство</h3>
+          <p class="project-desc">
+            Описние оизышграхфшохаобшщ ihpi ‘;dnfpiujbvpi ierghspiubvfi
+            egroihrouvhidu pohsf jbjdfoiub sdihfpigu psihuf poiehfop sdjbvjh
+            шрам фшзар зырмотчсмлт paihfpidhfvkbj/
+          </p>
+        </a>
+        <!-- ВЕБ ПЛАКАТ -->
+        <a
+          href="projects/garazhzhzh-web-poster.html"
+          class="project-card"
+          id="garazhzhzh-web-poster"
+        >
+          <div class="project-cover"></div>
+          <h3 class="project-title">Веб плакат</h3>
+          <p class="project-desc">
+            Описние оизышграхфшохаобшщ ihpi ‘;dnfpiujbvpi ierghspiubvfi
+            egroihrouvhidu pohsf jbjdfoiub sdihfpigu psihuf poiehfop sdjbvjh
+            шрам фшзар зырмотчсмлт paihfpidhfvkbj/
+          </p>
+        </a>
+        <!-- Проект 1 -->
+        <a
+          href="projects/font-infographics-tt-autonomous.html"
+          class="project-card"
+          id="font-infographics-tt-autonomous"
+        >
+          <div class="project-cover"></div>
+          <h3 class="project-title">Шрифт TT Autonomous | Веб-плакат</h3>
+          <p class="project-desc">
+            Описние оизышграхфшохаобшщ ihpi ‘;dnfpiujbvpi ierghspiubvfi
+            egroihrouvhidu pohsf jbjdfoiub sdihfpigu psihuf poiehfop sdjbvjh
+            шрам фшзар зырмотчсмлт paihfpidhfvkbj/
+          </p>
+        </a>
+        <!-- Проект 1 -->
+        <a href="projects/" class="project-card" id="">
+          <div class="project-cover"></div>
+          <h3 class="project-title">Звериум | Мобильное приложение</h3>
+          <p class="project-desc">
+            Описние оизышграхфшохаобшщ ihpi ‘;dnfpiujbvpi ierghspiubvfi
+            egroihrouvhidu pohsf jbjdfoiub sdihfpigu psihuf poiehfop sdjbvjh
+            шрам фшзар зырмотчсмлт paihfpidhfvkbj/
+          </p>
+        </a>
+      </div>
+
+      <button class="arrow right">›</button>
+    </div>
 
     <footer>
       <p>Пишите мне на почту!</p>
       <h6>tat.ponom2004@gmail.com</h6>
-      <a href="">Проекты</a>
-      <a href="">Обо мне</a>
+      <a href="projects.html">Проекты</a>
+      <a href="about-me.html">Обо мне</a>
 
       <div id="social-links-container">
         <a
@@ -76,6 +166,7 @@
             />
           </svg>
         </a>
+
         <a href="" class="socials-link" data-tooltip="Vk">
           <svg
             width="41"
