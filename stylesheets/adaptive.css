@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+  .paragraph-tags {
+    flex-direction: column;
+  }
+
+  .paragraph {
+    width: 100%;
+  }
+
+  #big-gallery-wrap #projects-gallery {
+    grid-template-columns: 1fr;
+  }
+}

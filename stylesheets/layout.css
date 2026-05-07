@@ -1,10 +1,12 @@
-/* #region База */
 :root {
   --text: #7e7e7e;
   --footer-bg: #7e7e7e;
   --footer-text-color: #ffffff;
   --link-hover: rgb(255, 109, 165);
+  --normal-text-size: 1.1;
 }
+
+/* #region База */
 
 body {
   box-sizing: border-box;
@@ -62,11 +64,14 @@ nav {
 h2 {
   font-size: 3rem;
   font-weight: 600;
-  margin: 0 0 3rem 0;
+  /* margin: 0 0 3rem 0; */
 }
 
 p {
   line-height: 1.4rem;
+  font-size: calc(
+    (var(--normal-text-size) - 1) * calc(0.012 * min(100vh, 900px)) + 1rem
+  );
 }
 
 a {
@@ -134,7 +139,7 @@ a:hover {
 
 /* #endregion */
 
-/* #region GALLERY */
+/* #region МАЛАЯ GALLERY */
 
 /* #section-projects-gallery h2 {
   font-size: 3rem;
@@ -142,7 +147,7 @@ a:hover {
   margin: 0 0 3rem 0;
 } */
 
-#projects-gallery-wrap {
+#projects-gallery-animation-wrap {
   position: relative;
   display: flex;
   align-items: center;
@@ -153,7 +158,7 @@ a:hover {
   margin-bottom: 5vw;
 }
 
-#projects-gallery {
+#projects-gallery-animation-wrap #projects-gallery {
   display: flex;
 
   width: auto;
@@ -201,21 +206,21 @@ a:hover {
   pointer-events: none;
 }
 
-.project-card {
+#projects-gallery-animation-wrap .project-card {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   width: 25vw;
 }
 
-.project-cover {
+#projects-gallery-animation-wrap .project-cover {
   width: 100%;
   aspect-ratio: 1 / 1;
   background-color: #7e7e7e;
-  border-radius: 25px;
+  border-radius: 1rem;
 }
 
-.project-title {
+#projects-gallery-animation-wrap .project-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 1rem 0 1rem 0;
@@ -233,24 +238,39 @@ a:hover {
   will-change: transform;
 }
 
-#garazhzhzh-brand-identity .project-cover {
-  background-image: url('../img/projects/Айдентика Гаражжж/знак стрелка на дереве-2.png');
+/* #endregion */
+
+/* #region БОЛЬШАЯ GALLERY */
+
+#big-gallery-wrap {
+  margin-left: 4vw;
+  margin-right: 4vw;
 }
 
-#zverium .project-cover {
-  background-image: url('../img/projects/Звериум/мерч.jpg');
+#big-gallery-wrap #projects-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6vw;
 }
 
-#garazhzhzh-3d-environment .project-cover {
-  background-image: url('../img/projects/Пространство/кафе.png');
+#big-gallery-wrap .project-card {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  /* width: 42vw; */
 }
 
-#garazhzhzh-web-poster .project-cover {
-  background-image: url('../img/projects/Веб-плакат Гаражжж/iphone.png');
+#big-gallery-wrap .project-cover {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: #7e7e7e;
+  border-radius: 1rem;
 }
 
-#font-infographics-tt-autonomous .project-cover {
-  background-image: url('../img/projects/Шрифт TT Autonomous/desktop-1.png');
+#big-gallery-wrap .project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0 1rem 0;
 }
 
 /* #endregion */
@@ -277,9 +297,6 @@ footer h6 {
   font-weight: 600;
 
   margin-bottom: 2rem;
-}
-
-footer p {
 }
 
 footer a {
@@ -329,14 +346,16 @@ footer a {
 }
 /* #endregion */
 
-/* СТРАНИЦА ПРОЕКТА */
+/* #region СТРАНИЦА ПРОЕКТА */
 
-.project-page-description > div {
+.paragraph-tags {
   display: flex;
   width: 100%;
+
+  padding-block: clamp(40px, 6vw, 140px);
 }
 
-.project-page-description > div > :first-child {
+.paragraph {
   width: 50%;
 }
 
@@ -344,10 +363,17 @@ footer a {
   width: 25%;
 }
 
+.paragraph,
+.single-image,
+.two-images {
+  margin-bottom: 2rem;
+}
+
 .single-image img {
   width: 100%;
 }
 
+/* 2 или несколько картинок в секции */
 .two-images {
   display: flex;
   width: 100%;
@@ -363,3 +389,5 @@ footer a {
 
   display: block;
 }
+
+/* #endregion */

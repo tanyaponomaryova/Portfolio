@@ -1,164 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // #region hero
-  const title = document.querySelector('#hero-title');
-  const words = Array.from(title.querySelectorAll('span'));
-
-  const iconsUrl = [
-    'img/icons/icon(1).svg',
-    'img/icons/icon(2).svg',
-    'img/icons/icon(3).svg',
-    'img/icons/icon(4).svg',
-    'img/icons/icon(5).svg',
-    'img/icons/icon(6).svg',
-    'img/icons/icon(7).svg',
-    'img/icons/icon(8).svg',
-    'img/icons/icon(9).svg',
-    'img/icons/icon(10).svg',
-    'img/icons/icon(11).svg',
-    'img/icons/icon(12).svg',
-    'img/icons/icon(13).svg',
-    'img/icons/icon(14).svg',
-    'img/icons/icon(15).svg',
-    'img/icons/icon(16).svg',
-    'img/icons/icon(17).svg',
-    'img/icons/icon(18).svg',
-  ];
-
-  const heroSection = document.getElementById('hero-section');
-  let last = 0;
-  heroSection.addEventListener('mousemove', (e) => {
-    showTrailImg(e);
-  });
-
-  function showTrailImg(e) {
-    // ограничение частоты создания картинок
-    const now = Date.now();
-    if (now - last < 100) return;
-    last = now;
-
-    const img = document.createElement('img');
-
-    img.src = iconsUrl[Math.floor(Math.random() * iconsUrl.length)];
-
-    img.classList.add('trail-img');
-
-    img.style.left = e.pageX + 'px';
-    img.style.top = e.pageY + 'px';
-
-    heroSection.appendChild(img);
-
-    // удаляем через время
-    setTimeout(() => {
-      img.remove();
-    }, 1000);
-  }
-
-  // ИКОНКИ В ЗАГОЛОВКЕ
-  function showRandomIcon() {
-    const oldIcon = title.querySelector('.icon');
-    if (oldIcon) oldIcon.remove();
-
-    const randomIndex = Math.floor(Math.random() * (words.length - 1));
-
-    const img = document.createElement('img');
-    img.src = iconsUrl[Math.floor(Math.random() * iconsUrl.length)];
-    img.classList.add('icon');
-
-    //вставляет элемент СРАЗУ ПОСЛЕ случайно выбранного слова
-    if (randomIndex % 2 == 0) {
-      words[randomIndex].after(img);
-    } else {
-      words[randomIndex].before(img);
-    }
-
-    // Плавное появление (раздвигает текст)
-    gsap.to(img, {
-      width: 'auto',
-      height: '60px',
-      marginLeft: 6,
-      marginRight: 6,
-      duration: 0.5,
-      ease: 'power2.out',
+  // #region NAV
+  fetch('../components/nav.html')
+    .then((res) => res.text())
+    .then((data) => {
+      document.getElementById('nav-placeholder').innerHTML = data;
     });
-
-    // Плавное исчезновение
-    gsap.to(img, {
-      width: 0,
-      marginLeft: 0,
-      marginRight: 0,
-      duration: 1,
-      delay: 1,
-      ease: 'power2.out',
-      onComplete: () => img.remove(),
-    });
-  }
-
-  // Запуск каждые 3 секунды
-  setInterval(showRandomIcon, 3000);
-
-  console.log(gsap);
-
   // #endregion
 
-  // #region gallery working version without drag / swipe
-  const gallery = document.getElementById('projects-gallery');
-
-  const leftBtn = document.querySelector('.arrow.left');
-  const rightBtn = document.querySelector('.arrow.right');
-
-  let direction = 1; // 1 = right, -1 = left
-  let speed = 1;
-
-  let paused = false;
-  let resumeTimeout = null;
-
-  function autoScrollLoop() {
-    const maxScroll = gallery.scrollWidth - gallery.clientWidth;
-
-    const atEnd = gallery.scrollLeft >= maxScroll;
-    const atStart = gallery.scrollLeft <= 0;
-
-    if (!paused) {
-      gallery.scrollLeft += speed * direction;
-
-      if (atEnd) direction = -1;
-      if (atStart) direction = 1;
-    }
-
-    updateArrows();
-    requestAnimationFrame(autoScrollLoop);
-  }
-
-  autoScrollLoop();
-
-  function pauseAutoScroll() {
-    paused = true;
-
-    clearTimeout(resumeTimeout);
-
-    resumeTimeout = setTimeout(() => {
-      paused = false;
-    }, 2000);
-  }
-
-  leftBtn.addEventListener('click', () => {
-    pauseAutoScroll();
-    gallery.scrollBy({ left: -300, behavior: 'smooth' });
-  });
-
-  rightBtn.addEventListener('click', () => {
-    pauseAutoScroll();
-    gallery.scrollBy({ left: 300, behavior: 'smooth' });
-  });
-
-  function updateArrows() {
-    const maxScroll = gallery.scrollWidth - gallery.clientWidth;
-
-    const atStart = gallery.scrollLeft <= 0;
-    const atEnd = gallery.scrollLeft >= maxScroll;
-
-    leftBtn.classList.toggle('hidden', atStart);
-    rightBtn.classList.toggle('hidden', atEnd);
-  }
+  // #region FOOTER
+  fetch('../components/footer.html')
+    .then((res) => res.text())
+    .then((data) => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
   // #endregion
 });
