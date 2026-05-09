@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll(
-    '.project-card, p, span, h1, h2, h3, a, #footer-placeholder'
+    '.project-card, p, span, h1, h2, h3, a, #footer-placeholder, img'
   );
 
   console.log('Элементы');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     },
     {
-      threshold: 0.5,
+      threshold: 0.3,
     }
   );
 
