@@ -517,6 +517,40 @@ footer a {
 
 /* #endregion */
 
+/* #region ОБО МНЕ */
+#about-me-section {
+  margin-block: 4vw;
+  display: flex;
+}
+
+#portrait {
+  width: 40%;
+  aspect-ratio: 1/1;
+  background-color: var(--text);
+}
+
+#about-me-section h2 {
+  margin-top: 0;
+}
+
+#about-me-text {
+  /* width: 50%; */
+  margin-left: 4vw;
+}
+
+#about-me-text,
+#about-me-section .tags-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.two-columns {
+  display: flex;
+  gap: 6vw;
+  justify-content: space-between;
+}
+/* #endregion */
+
 /* #region АНИМАЦИЯ ПОЯВЛЕНИЯ */
 .fade-in {
   opacity: 0;

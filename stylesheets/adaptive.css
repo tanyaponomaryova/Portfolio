@@ -14,4 +14,16 @@
   #big-gallery-wrap .project-card {
     width: 92vw;
   }
+
+  #portrait {
+    width: 100%;
+  }
+
+  #about-me-section {
+    flex-direction: column;
+  }
+
+  .two-columns {
+    flex-direction: column;
+  }
 }
