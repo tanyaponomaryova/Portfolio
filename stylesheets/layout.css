@@ -527,7 +527,9 @@ footer a {
   width: 40vw;
   aspect-ratio: 1/1;
   display: inline-block;
-  background-color: var(--text);
+  /* background-color: var(--text); */
+  background-image: url(../img/portrait.png);
+  background-size: cover;
 }
 
 #about-me-section h2 {
