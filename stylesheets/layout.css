@@ -1,6 +1,7 @@
 :root {
   --text: #7e7e7e;
   --footer-bg: #7e7e7e;
+  --image-bg: #c9c9c9;
   --footer-text-color: #ffffff;
   --link-hover: rgb(255, 109, 165);
   --normal-text-size: 1.2;
@@ -61,7 +62,8 @@ nav {
 #main-logo {
   width: 50px;
   height: 50px;
-  background-color: var(--text);
+  /* background-color: var(--text); */
+  background-image: url('../img/icons/icon(11).svg');
 }
 
 #nav-main-container {
@@ -275,7 +277,7 @@ a:hover {
 #projects-gallery-animation-wrap .project-cover {
   width: 100%;
   aspect-ratio: 1 / 1;
-  background-color: #7e7e7e;
+  background-color: var(--image-bg);
   border-radius: 1rem;
 
   /* margin-bottom: 2rem; */
@@ -351,7 +353,7 @@ a:hover {
 #big-gallery-wrap .project-cover {
   width: 100%;
   aspect-ratio: 4 / 3;
-  background-color: #7e7e7e;
+  background-color: var(--image-bg);
   border-radius: 1rem;
 }
 
@@ -522,11 +524,13 @@ footer a {
 #about-me-section {
   margin-block: 4vw;
   display: flex;
+  align-items: flex-start;
 }
 
 #portrait {
-  width: 40%;
+  width: 40vw;
   aspect-ratio: 1/1;
+  display: inline-block;
   background-color: var(--text);
 }
 
@@ -535,7 +539,7 @@ footer a {
 }
 
 #about-me-text {
-  /* width: 50%; */
+  width: 50%;
   margin-left: 4vw;
 }
 
