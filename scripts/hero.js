@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function showTrailImg(e) {
     // ограничение частоты создания картинок
     const now = Date.now();
-    if (now - last < 100) return;
+    if (now - last < 80) return;
     last = now;
 
     const img = document.createElement('img');
@@ -74,9 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Плавное появление (раздвигает текст)
     gsap.to(img, {
       width: 'auto',
-      height: '60px',
-      marginLeft: 6,
-      marginRight: 6,
+      height: '0.8em',
+      // marginLeft: 6,
+      // marginRight: 6,
       duration: 0.5,
       ease: 'power2.out',
     });
@@ -84,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Плавное исчезновение
     gsap.to(img, {
       width: 0,
-      marginLeft: 0,
-      marginRight: 0,
+      // marginLeft: 0,
+      // marginRight: 0,
       duration: 1,
       delay: 1,
       ease: 'power2.out',

@@ -3,7 +3,8 @@ const projects = [
     slug: 'garazhzhzh-brand-identity',
     coverUrl: `знак стрелка на дереве-2.png`,
     title: 'Гаражжж | Айдентика ',
-    shortDescription: 'Айдентика и визуальная система для бара.',
+    shortDescription:
+      'Вымышленный автосервис для жуков всех видов и размеров. Здесь можно починить лапки, отполировать крылья или подготовиться к главным летательным гонкам сезона.',
     fullDescription: `<h3>О проекте</h3>
 <h3 class="big-description">
 «Гаражжж» — вымышленный автосервис для жуков всех видов и размеров. Здесь можно починить лапки, отполировать крылья или подготовиться к главным летательным гонкам сезона. Проект объединяет автомобильную эстетику, мир насекомых и атмосферу гоночных соревнований в яркую фантазийную айдентику.
@@ -91,7 +92,8 @@ const projects = [
     slug: 'zverium',
     coverUrl: `мерч.jpg`,
     title: 'Звериум | Приложение ',
-    shortDescription: 'Айдентика и визуальная система для бара.',
+    shortDescription:
+      'Фантастическое образовательное пространство, в котором наставниками становятся животные, а обучение строится вокруг их природных способностей и уникального характера.',
     fullDescription: `<h3> О проекте </h3>
 
 
@@ -116,15 +118,6 @@ const projects = [
       {
         type: 'single',
         content: '1.jpg',
-      },
-
-      {
-        type: 'text',
-        content: `Lentiful is an instant lentil company aiming to provide
-          nutrient-dense, delicious and healthy lunches at a moment’s notice.
-          Founder Ben Bacon came to me to develop a full brand identity and
-          packaging system. Our goal was to transform a traditionally overlooked
-          category in`,
       },
 
       {
@@ -183,7 +176,8 @@ const projects = [
     slug: 'garazhzhzh-3d-environment',
     coverUrl: `кафе.png`,
     title: 'Гаражжж | 3D Пространство',
-    shortDescription: 'Айдентика и визуальная система для бара.',
+    shortDescription:
+      'Автосервис для жуков, переосмысленный как самостоятельное пространство со своей атмосферой, архитектурой и внутренним устройством.',
     fullDescription: `<h3>
  О проекте
 </h3>
@@ -318,7 +312,8 @@ const projects = [
     slug: 'garazhzhzh-web-poster',
     coverUrl: `iphone.png`,
     title: 'Гаражжж | Веб-плакат',
-    shortDescription: 'Айдентика и визуальная система для бара.',
+    shortDescription:
+      'Одностраничный сайт, где пользователь наблюдает за гонкой жуков от стартового отсчёта до финала.',
     fullDescription: `<h3> О проекте </h3>
 
 <h3 class="big-description"> «Гаражжж» — одностраничный веб-плакат, развивающий визуальную вселенную автосервиса для жуков.
@@ -374,7 +369,8 @@ const projects = [
     slug: 'font-tt-autonomous',
     coverUrl: `desktop-1.png`,
     title: 'TT Autonomous | Веб-плакат',
-    shortDescription: 'Айдентика и визуальная система для бара.',
+    shortDescription:
+      'Шрифт TT Autonomous — современный технологичный гротеск с брутальной геометрией и угловатыми формами от студии TypeType.',
     fullDescription: `<h3> О проекте</h3>
 <h3 class="big-description">
 Проект посвящён одностраничному сайту о шрифте TT Autonomous — современном технологичном гротеске с брутальной геометрией и угловатыми формами. Основной идеей стало исследование того, как визуальный язык сайта может передавать характер шрифта через атмосферу и метафору.

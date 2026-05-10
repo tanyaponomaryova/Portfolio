@@ -7,15 +7,15 @@
   --normal-text-size: 1.2;
 
   /* tags colors*/
-  --tag-1: rgb(255, 109, 165);
-  --tag-2: rgb(255, 109, 240);
-  --tag-3: rgb(136, 109, 255);
-  --tag-4: rgb(44, 171, 255);
-  --tag-5: rgb(67, 255, 195);
-  --tag-6: rgb(155, 255, 109);
-  --tag-7: rgb(255, 250, 109);
+  --tag-1: #ec61be;
+  --tag-2: rgb(142, 142, 142);
+  --tag-3: #f795fe;
+  --tag-4: #3f93fe;
+  --tag-5: #a0fbfe;
+  --tag-6: #8fe24b;
+  --tag-7: rgb(136, 109, 255);
   --tag-8: rgb(255, 125, 82);
-  --tag-9: rgb(142, 142, 142);
+  --tag-9: #fed92a;
 }
 
 html,
@@ -127,18 +127,15 @@ a:hover {
 /* #region hero */
 
 #hero-section {
-  height: calc(100vh - 6vw - 50px);
+  /* height: calc(100vh - 6vw - 50px); */
   /* font-size: 4rem; */
-
   /* font-size: 45px; */
-
   /* font-size: 5vw; */
-
   /* font-size: 90px; */
 
   font-size: clamp(45px, 5vw, 90px);
   height: calc(100vh - 1em - 60px);
-  /* background-color: antiquewhite; */
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -153,9 +150,8 @@ a:hover {
 
 .icon {
   width: 0;
-  height: 60px;
-  margin: 0;
-  /* padding:; */
+  height: 0.8em;
+  /* margin: 0; */
   display: inline-block;
   overflow: hidden;
 }
